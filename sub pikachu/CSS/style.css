@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #f4dc26;
+    --secondary-color: #ffe62d;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(var(--primary-color), #ffe62d);
+    flex-direction: flex;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 64px;
+    font-family: 'Audiowide', cursive; 
+}
+
+header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin: 30px;
+}
+
+.pokeball {
+    width: 5.5rem;
+    margin: 10px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container--title {
+    position: relative;
+    text-align: center;
+}
+
+.title--text {
+    font-size: 18vw;
+    color: rgb(255, 252, 252);
+}
+
+.title--transparent {
+    position: absolute;
+    font-size: 20vw;
+    top: -30%;
+    opacity: 0.3;
+    left: 1vw;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    color: var(--secondary-color);
+}
+
+.container div {
+    width: 55%;
+    z-index: 1;
+}
+
+.container h2 {
+    font-size: 9vh;
+    color: #5c3613;
+    text-align: start;
+    margin: 10px;
+    text-align: left;
+}
+
+.container p {
+    color: #5c3613;
+    font-size: 2.5vh;
+    width: 30vw;
+    text-align: left;
+}
+
+.action {
+    display: flex;
+    justify-content: center;
+    background-color: #5c3613;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: auto;
+    max-width: 300px;
+}
+
+.action a {
+    font-size: 35px;
+    color: white;
+    text-decoration: none;
+}
+
+.pikachu--image {
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    height: 50vh;
+    transform: translate(-50%, -50%);
+}
+
+footer {
+    height: 50px;
+}
+
+footer p {
+    text-align: center;
+}
+
+@media (max-width: 820px) {
+    body {
+        padding-inline: 20px;
+    }
+
+    .title--text {
+       
+        position: relative; 
+        top: -500%; 
+        z-index: 2; 
+        color: #ffffff; 
+    }
+    
+    .title--transparent {
+        
+        position: absolute; 
+        top: 0; 
+        left: 50%; 
+        transform: translateX(-50%); 
+        color: rgba(255, 255, 255, 0.3); 
+        z-index: 1; /
+    }
+    
+
+    .container {
+        flex-direction: column;
+        align-items: center; 
+        text-align: center;
+    }
+
+    .container div {
+        width: 100%; 
+        text-align: center;
+    }
+
+    .container h2 {
+        font-size: 5vh;
+        text-align: center; 
+    }
+
+    .container p {
+        font-size: 2vh;
+        width: 90%; 
+        margin: 0 auto;
+    }
+
+    .action {
+        width: 100%; 
+        justify-content: center; 
+        margin-top: 20px; 
+    }
+
+    .pikachu--image {
+        position: relative;
+        left: 50%; 
+        top: 0;
+        transform: translateX(-50%); 
+        height: 30vh;
+        max-width: 50vw; 
+        margin-top: 20px;
+        order: -1; 
+    }
+
+    
+    footer {
+        display: none;
+    }
+
+   
+    .container--title {
+        position: relative;
+        text-align: center;
+        margin-bottom: 10px; 
+    }
+
+    .title--text {
+        font-size: 10vw; 
+    }
+
+    .title--transparent {
+        font-size: 13vw;
+        top: -500%; 
+    }
+}
+
+
+
+@media (max-width: 576px) {
+    body {
+        padding-inline: 10px;
+    }
+
+    .title--text {
+        font-size: 18vw; 
+        top: -10%;
+        z-index: 2;
+    }
+
+    .title--transparent {
+        font-size: 25vw; 
+        top: -10%;
+        z-index: 1;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 20vh; 
+    }
+
+    .container div {
+        width: 100%;
+    }
+
+   
+    .container h2 {
+        font-size: 4vh;
+        margin-bottom: 2vh; 
+    }
+
+    .action {
+        max-width: 200px;
+        margin-top: 3vh; 
+        z-index: 3;
+    }
+
+    .pikachu--image {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 25vh;
+        z-index: 0;
+    }
+
+   
+    .container p {
+        display: none;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 10px; 
+        width: 100%;
+        text-align: center;
+    }
+}
